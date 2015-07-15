@@ -1,4 +1,6 @@
-pacakge looper
+package looper
+
+import "testing"
 
 func TestLooper(t *testing.T) {
 	s := Looper(3)

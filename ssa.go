@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"go/build"
 	"os"
+	"path/filepath"
 
 	"golang.org/x/tools/go/loader"
 	"golang.org/x/tools/go/ssa"
@@ -16,7 +17,8 @@ func main() {
 		Build: &build.Default,
 	}
 
-	file, err := conf.ParseFile("looper.go", nil)
+	path, _ := filepath.Abs("looper")
+	file, err := conf.ParseFile(path + "/" + "looper.go", nil)
 	if err != nil {
 		fmt.Println(err)
 		return

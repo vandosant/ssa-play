@@ -1,4 +1,4 @@
-package loopin
+package looper
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 )
 
 func Looper(n int) string {
-	if n <= 0 {
+	if n > 0 {
 		for i := 0; i < n; i++ {
 			fmt.Printf("POWERLOOP CYCLE %d\n", i)
 		}
